@@ -24,5 +24,5 @@
 
 
 To Do List
-[] implement inertia js
-[] create delete task api
+- [ ] implement inertia js
+- [ ] create delete task api
