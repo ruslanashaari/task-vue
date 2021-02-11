@@ -21,3 +21,8 @@
 - create add task api [completed]
 - create update task api [completed]
 - create delete task api
+
+
+To Do List
+[] implement inertia js
+[] create delete task api
