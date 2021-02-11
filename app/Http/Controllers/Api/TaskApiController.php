@@ -33,7 +33,7 @@ class TaskApiController extends Controller
 	    	$task = Task::create([
 	    		'name'			=>	$request->name,
 	    		'description'	=>	$request->description ?? '',
-	    		'user_id'		=>	$request->user_id
+	    		'user_id'		=>	\Auth::id()
 	    	]);
 
 	    	$array_task = $task->toArray();

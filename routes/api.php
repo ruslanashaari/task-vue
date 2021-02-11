@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::middleware('auth:api')->group(function () {
 
-Route::get('task-list', 'App\Http\Controllers\Api\TaskApiController@getList');
-Route::post('task-create', 'App\Http\Controllers\Api\TaskApiController@create');
-Route::post('task-update/{id}', 'App\Http\Controllers\Api\TaskApiController@update');
-Route::get('task-delete/{id}', 'App\Http\Controllers\Api\TaskApiController@delete');
+    Route::get('task-list', 'App\Http\Controllers\Api\TaskApiController@getList')->name('api.task.list');
+	Route::post('task-create', 'App\Http\Controllers\Api\TaskApiController@create')->name('api.task.create');
+	Route::post('task-update/{id}', 'App\Http\Controllers\Api\TaskApiController@update')->name('api.task.update');
+	Route::get('task-delete/{id}', 'App\Http\Controllers\Api\TaskApiController@delete')->name('api.task.delete');
+
+});
